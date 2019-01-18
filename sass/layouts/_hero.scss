@@ -1,0 +1,73 @@
+.hero-section{
+    padding-bottom: 120px;
+    @extend %bg;
+    .tab-wrap{
+        margin-top: 448px;
+        width: 100%;
+        .tab-item{
+            @include grid(4, 4.96969696969697%);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 10px;
+            .thumb-wrap{
+                width: 100%;
+                position: relative;
+                span{
+                    @include centerBoth;
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+    .content-wrap{
+        @extend %fw;
+        margin-top: 90px;
+        .content{
+            float: left;
+            width: 62%;
+            h2{
+                margin-bottom: 55px;
+            }
+        }
+        .offering-list{
+            width: 195px; 
+            float: right;
+            margin-top: 85px;
+            *{
+                float: left;
+                clear: both;
+            }
+            span{
+                padding-bottom: 20px;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    
+    @include media($mobile){
+        padding-bottom: 0;
+        .container{
+            min-height: 1039px;
+            position: relative;
+            padding-bottom: 20px;
+            .tab-wrap{
+                display: none;
+            }
+    
+            .content-wrap{
+                position: absolute;
+                bottom: 88px;
+                left: 0;
+                @extend %mobilePadding;
+                .content{
+                    width: 100%;
+                }
+            }
+            .offering-list{
+                display: none;
+            } 
+        }               
+    }
+}

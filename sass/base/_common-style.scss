@@ -1,0 +1,24 @@
+body{
+    background: $base-bg;
+    overflow-x: hidden; 
+    overflow-y:auto; 
+  }
+
+img{
+     display: block;
+    }
+
+  header, 
+  main, 
+  section, 
+  footer{
+      @extend %fw;
+  }
+
+  .container{
+      @include outer-container(1160px);
+      padding: 0 30px;
+      @include media($mobile){
+          @extend %mobilePadding;
+      }
+  }

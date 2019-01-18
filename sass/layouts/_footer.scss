@@ -1,0 +1,79 @@
+// Footer upper section
+.main-footer-section{
+    margin-top: 104px;
+    background-color: $base-text;
+    .footer-nav-wrap{
+        @extend %fw;
+        padding: 38px 0;
+        border-bottom: 1px solid tint($base-text, 40%);
+        ul{
+            text-align: center;
+            li{
+                @include inlineMiddle;
+                margin: 0 21px;
+            }
+        }
+    }
+}
+
+// Footer widget section
+.footer-widget-wrap{
+    @extend %fw;
+    padding: 114px 0 125px;
+    .container{
+        position: relative;
+        .copyright{
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            margin: 0;
+        }
+    }
+    .footer-widget{
+        float: left;
+        width: 33.33333333333333%;
+        padding-left: 5.7%;
+        &:first-child{
+            padding-left: 0;
+        }
+        &:nth-child(2){
+            width: 34%;
+        }
+        &:nth-child(3){
+            width: 32%;
+        }
+        .logo{
+            width: 81.181062%;
+            max-width: 305px;
+            margin-top: 6px;
+        }
+        ul{
+            @extend %fw;
+            li{
+                @extend %fw;
+                margin-top: 8px;
+                *{
+                    @include inlineMiddle;
+                }
+                .icon{
+                    width: 21px;
+                }
+                h6{
+                    padding-left: 21px;
+                    width: 100px;
+                    text-align: left;
+                }
+
+            }
+        }
+        
+        .quick-link{
+            @extend %fw;
+        }
+        p{
+            float: left;
+            clear: both;
+            margin-top: 10px;
+        }
+    }
+}

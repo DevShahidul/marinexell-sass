@@ -1,0 +1,101 @@
+// Colors
+$base-text: #111a27;
+$base-bg: #ffffff;
+$secondary-color: #f2f2f0;
+$tertiary-color: #949494;
+$theme-red: #bc2629;
+$base-transparent: rgba(17, 26, 39, .7);
+
+// Nav link color
+.nav-link a{
+    color: $base-bg;
+}
+
+
+// header text color
+.main-header{
+    color: $base-bg;
+}
+
+// Hero section text color
+.hero-section{
+    color: $base-bg;
+}
+
+
+// hero tab thumb
+.thumb-wrap{
+    span{
+        color: $base-bg;
+    }
+}
+
+// offering link color
+.offering-list{
+    a{
+        color: $base-bg;
+    }
+}
+
+// Article list style css
+.content{
+    ul{
+        li{
+            a{
+                color: $base-text;
+            }
+        }
+    }
+}
+
+
+// Article first letter
+.article-wrap{
+    &:first-child{
+       .content{
+            p:first-letter{
+                color: $theme-red;
+            }
+        }
+    }
+}
+
+
+// Footer nav link
+.main-footer-section{
+    .footer-nav-wrap{
+        ul{
+            li{
+                a{
+                    color: $base-bg;
+                }
+            }
+        }
+    }
+}
+
+
+// Footer widget link
+.footer-widget-wrap{
+    .footer-widget{
+        ul{
+            li{
+                a{
+                    color: $base-bg;
+                }
+
+            }
+        }
+        .quick-link{
+            a{
+                color: $base-bg;
+            }
+        }
+        p{
+            color: $tertiary-color;
+        }
+    }
+    .copyright{
+        color: $tertiary-color;
+    }
+}

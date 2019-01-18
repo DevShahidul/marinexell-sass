@@ -1,0 +1,139 @@
+// Page content section
+.page-content-section{
+    @include outer-container(1440px);
+    float: none;
+    .article-wrap{
+        position: relative;
+        @extend %fw;
+        margin-top: 130px;
+        &:first-child{
+           margin-top: 190px; 
+        }
+        figure{
+            @extend %bg;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            img{
+                display: none;
+            }
+        }
+        &.image-on-left{
+            figure{
+                left: 0;
+                width: 40.97222222222222%;
+            }
+            .container{
+                .content{
+                    float: right;
+                    width: 48.95833333333333%;
+                }
+            }
+        }
+        &.image-on-right{
+            figure{
+                right: 0;
+                width: 48.95833333333333%;
+            }
+            .container{
+                .content{
+                    float: left;
+                    width: 38.09090909090909%;
+                }
+            }
+        }
+        .article{
+            @extend %fw;
+        }
+        .container{
+            .content{
+                padding: 64px 0;
+                h2{
+                    margin-bottom: 40px;
+                }
+                h6{
+                    margin-bottom: 29px;
+                }
+                ul{
+                    @extend %fw;
+                    margin-bottom: 40px;
+                    li{
+                        display: inline-block;
+                        position: relative;
+                        margin-right: 54px;
+                        &::after{
+                            @include beforeAfter(
+                                $width: 4px,
+                                $height: 4px,
+                            );
+                            @include centerTop;
+                            border-radius: 50%;
+                            background-color: $base-text;
+                            left: auto;
+                            right: -20px;
+                        }
+                    }
+                }
+                p{
+                    clear: both;
+                    margin-bottom: 48px;
+                }
+            }
+        }
+        
+    }
+}
+
+// Project section 
+.projects-section{
+    @extend %fw;
+    margin-top: 108px;
+    .projects-wrap{
+        @extend %fw;
+        .project-item{
+            @include grid(3, 6.363636363636364%);
+            margin-top: 19px;
+            figure{
+                width: 100%;
+            }
+            p{
+                clear: both;
+                margin-top: 13px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+// Partner section 
+.partner-section{
+    @extend %fw;
+    margin-top: 120px;
+    .container{
+        text-align: center;
+        h2{
+            margin-bottom: 38px;
+        }
+        p{
+            margin: 0 auto;
+            margin-bottom: 40px;
+            max-width: 650px;
+        }
+
+        .parnter-logo-wrap{
+            display: table;
+            width: 100%;
+            a{
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                padding: 0 10px;
+                img{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

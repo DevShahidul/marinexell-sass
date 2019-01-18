@@ -1,0 +1,93 @@
+.main-header{
+    position: fixed;
+    z-index: 99;
+    top: 1px; 
+    margin-top: -1px;
+    > .container{
+        position: relative;
+        max-width: 1344px;
+    }
+    .logo-wrap{
+        width: 100%;
+        padding-top: 44px;
+        position: relative;
+        z-index: 2;
+        .logo{
+            width: 410px;
+            @include inlineMiddle;
+        }
+        .nav-icon-wrap{
+            @include inlineMiddle;
+            margin-left: 57px;
+            cursor: pointer;
+            .icon, .nav-title{
+                @include inlineMiddle;
+            }
+            .icon{
+                margin-right: 10px;
+                .close-icon{
+                    display: none;
+                }
+                &.close{
+                    .close-icon{
+                        display: block;
+                    }
+                    .helm-icon{
+                        display: none;
+                    }
+                }
+            }
+            &:hover{
+                .helm-icon{
+                    @include animation(spinAround 2s linear infinite)
+                }
+            }
+        }
+        .action-icon-wrap{
+            position: absolute;
+            top: 40px;
+            right: 30px;
+            .icon{
+                width: 25px;
+                @include inlineMiddle;
+                margin-left: 19px;
+                &.language{
+                    span{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    @include media($mobile){
+        .logo-wrap{
+            padding-top: 0px;
+            .logo{
+                float: left;
+                width: 207px;
+                margin-top: 36px;
+            }
+            .nav-icon-wrap{
+                float: right;
+                margin-left: 0;
+                margin-top: 31px;
+                .nav-title{
+                    display: none;
+                }
+
+            }
+            .action-icon-wrap{
+                display: none;
+            }
+        }
+    }
+}
+
+.navShow {
+    overflow: hidden;
+    .main-header{
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}

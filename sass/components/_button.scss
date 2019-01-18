@@ -1,0 +1,41 @@
+#{$all-buttons},
+.btn{
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: $button-text;
+    border: 1px solid $button-border;
+    width: 303px; 
+    height: 53px;
+    line-height: 51px;
+    text-align: center;
+    text-decoration: none;
+    @include transition;
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: $button-hovered-bg;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        @include transition;
+
+    }
+}
+
+#{$all-buttons-hover}{
+    color: $button-hovered-text;
+    &::after{
+        width: 100%;
+    }
+}
+.btn{
+    &:hover{
+        color: $button-hovered-text;
+        &::after{
+            width: 100%;
+        }
+    }
+}

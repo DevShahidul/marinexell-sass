@@ -1,0 +1,203 @@
+// roboto font face
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+// NeoDisplay font face
+@include font-face("NoeDisplay-Regular", "../fonts/NoeDisplay-Regular");
+
+// AvenirNextMedium font face
+@include font-face("Avenir-Next-Medium", "../fonts/AvenirNextMedium");
+
+// AvenirNextDemiBold font face
+@include font-face("AvenirNextDemiBold", "../fonts/AvenirNextDemiBold");
+
+// fonts
+$default-font-size: 14px;
+$default-line-height: 28px;
+$default-font-family: 'Roboto', sans-serif;
+$default-font-weight: 300;
+$font-family-NoeDisplay: $font-stack-NoeDisplay-Regular;
+$nav-font-size: 36px;
+$nav-line-height: $nav-font-size + 3;
+$subnav-font-size: $default-font-size + 2;
+$subnav-line-height: $subnav-font-size + 6;
+
+$regularFontWeight: 400;
+$mediumFontWeight: 500;
+$boldFontWeight: 700;
+
+
+
+
+body{
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    font-family: $default-font-family; 
+    font-weight: $default-font-weight;   
+    -webkit-text-size-adjust: 100%; 
+    -moz-text-size-adjust:100%; 
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased; 
+}
+
+a{
+    outline: none;
+    &:focus{
+        outline: none;        
+    }
+}
+
+// Heading fonts
+h2{
+    @include fonts(45px, 45px);
+    font-family: $font-stack-NoeDisplay-Regular;
+}
+
+h6{
+    @include fonts(17px, $default-line-height + 3);
+    color: $tertiary-color;
+}
+
+// button
+.btn{
+    font-weight: $mediumFontWeight;
+}
+
+// lead text
+.lead-text{
+    @include fonts(18px, $default-line-height + 3, 300);
+}
+
+// nav 
+.nav-link{
+    @include centerBoth;
+    > a{
+        @include fonts($nav-font-size, $nav-line-height);
+        font-family: $font-stack-NoeDisplay-Regular;
+
+    }
+    ul{
+        margin-top: 15px;
+        li{
+            a{
+                @include fonts($subnav-font-size, $subnav-line-height);
+
+            }
+        }
+    }
+}
+
+// nav title
+.nav-title{
+    span{
+        font-family: $font-stack-AvenirNextDemiBold;
+        line-height: $default-line-height - 2;
+        letter-spacing: 2px;
+
+    }
+}
+
+// hero tab thumb
+.thumb-wrap{
+    span{
+        font-weight: $mediumFontWeight;
+        letter-spacing: 1.17px;
+    }
+}
+
+// hero offering link
+.offering-list{
+    a{
+        font-weight: $mediumFontWeight;
+        line-height: 20px;
+    }
+}
+
+// Hero Content paragraph medium text
+.content-wrap{
+    .lead-text{
+        span{
+            font-weight: $mediumFontWeight;
+            text-transform: uppercase;  
+        }
+    }
+}
+
+// Article list style css
+.content{
+    ul{
+        li{
+            a{
+               text-decoration: none;
+               font-weight: $regularFontWeight;
+            }
+        }
+    }
+}
+
+// Project item
+.project-item{
+    p{
+        font-weight: $regularFontWeight;
+    }
+}
+
+
+// Article wrap p
+.article-wrap{
+    &:first-child{
+       .content{
+            p:first-letter{
+                float: left;
+                margin-right: 10px;
+                text-transform: uppercase;
+                font-size: 55px;
+                line-height: 55px;
+            }
+        }
+    }
+}
+
+
+// Footer nav
+.main-footer-section{
+    .footer-nav-wrap{
+        ul{
+            li{
+                font-weight: $mediumFontWeight;
+                text-transform: uppercase;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+// Footer widget text
+.footer-widget-wrap{
+    .footer-widget{
+        ul{
+            li{
+                h6{
+                    font-weight: $regularFontWeight;
+                }
+                a{
+                    font-weight: $regularFontWeight;
+                    text-decoration: none;
+                }
+                
+            }
+        }
+        .quick-link{
+            a{
+                margin-right: 26px;
+                text-decoration: none;
+                font-weight: $mediumFontWeight;
+            }
+        }
+    }
+    .copyright{
+        font-weight: $regularFontWeight;
+    }
+}

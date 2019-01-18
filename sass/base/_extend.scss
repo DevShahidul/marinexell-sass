@@ -1,0 +1,15 @@
+%bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+%fw{
+    float: left;
+    width: 100%;
+}
+
+@include media($mobile){
+    %mobilePadding{
+        padding: 0 20px;
+    }
+}
