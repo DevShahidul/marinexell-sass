@@ -18,7 +18,14 @@ img{
   .container{
       @include outer-container(1160px);
       padding: 0 30px;
-      @include media($mobile){
-          @extend %mobilePadding;
+      @include media($mobileSmall){
+          @extend %smallMobilePadding;
       }
+      @include media($mobile){
+        @extend %mobilePadding;
+      }
+  }
+
+  .main-content-wrap{
+      overflow: hidden;
   }

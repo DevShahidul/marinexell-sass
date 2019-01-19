@@ -77,3 +77,144 @@
         }
     }
 }
+
+// Responsive mobile screen 
+@include media($mobile){
+    .main-footer-section{
+        margin-top: 44px;
+        .footer-nav-wrap {
+            padding: 52px 0 37px;
+            ul{
+
+                li{
+                    display: block;
+                    width: 100%;
+                    margin: 5px 0;
+                }
+            }
+        }
+        .footer-widget-wrap {
+            padding: 35px 0 34px;
+            .footer-widget{
+                width: 100%;
+                padding: 0;
+                display: none;
+                &:first-child{
+                    display: block;
+                }
+                .logo{
+                    width: 100%;
+                    margin: 0 auto;
+                    clear: both;
+                }
+            }
+            .copyright{
+                position: relative;
+                @extend %lataraba;
+                left: auto;
+                max-width: 157px;
+                margin: 0 auto;
+                clear: both;
+                padding-top: 19px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Tab small screen
+@include media($tablateSmall){
+    .main-footer-section{
+        padding: 0 90px;
+        @include displaFlex;
+        .footer-nav-wrap{
+            width: 28%;
+            padding-top: 143px;
+            border-bottom: 0px;
+            @include flexOrder;
+            .container{
+                position: relative;
+                padding: 0;
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: calc(100% - 15px);
+                    top: 10px;
+                    right: -54px;
+                    left: auto;
+                    background-color: tint($base-text, 40%);
+                    position: absolute;
+                }
+                ul{
+                    text-align: right;
+                    li{
+                        margin: 3px 0;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+
+        }
+        .footer-widget-wrap{
+            width: 72%;
+            padding: 54px 0 95px;
+            @include flexOrder(2);
+            .container{
+                padding: 0;
+                .footer-widget{
+                    width: 100%;
+                    padding-top: 61px;
+                    padding-left: 26%;
+                    .logo{
+                        margin-left: -10px;
+                    }
+                    ul{
+                        li{
+                            margin-top: 10px;
+                        }
+                    }
+                    &:first-child{
+                        padding-left: 0px;
+                        padding-top: 0;
+                    }
+                    &:nth-child(3){
+                        display: none;
+                    }
+                }
+                .copyright{
+                    position: relative;
+                    float: left;
+                    margin-top: 63px;
+                    left: auto;
+                    bottom: auto;
+                    padding-left: 26%;
+                }
+            }
+        }
+    }
+}
+
+// Tablate large screen
+@include media($tablatelarge){
+    // Footer nav area
+    .main-footer-section {
+        .footer-nav-wrap {
+            ul{
+                 li{
+                    margin: 0 16px;
+                 }
+            }
+        }
+    }
+
+    // Footer widget area
+    .footer-widget-wrap {
+        .footer-widget{
+            &:nth-child(2){
+                padding-left: 2.7%;
+            }
+        }
+    }
+
+}

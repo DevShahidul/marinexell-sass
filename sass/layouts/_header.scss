@@ -3,6 +3,7 @@
     z-index: 99;
     top: 1px; 
     margin-top: -1px;
+    @include transition;
     > .container{
         position: relative;
         max-width: 1344px;
@@ -10,6 +11,7 @@
     .logo-wrap{
         width: 100%;
         padding-top: 44px;
+        padding-bottom: 44px;
         position: relative;
         z-index: 2;
         .logo{
@@ -51,6 +53,9 @@
                 width: 25px;
                 @include inlineMiddle;
                 margin-left: 19px;
+                > img{
+                    cursor: pointer;
+                }
                 &.language{
                     span{
                         display: none;
@@ -60,8 +65,13 @@
         }
     }
     @include media($mobile){
+        .container{
+            padding: 0 20px;
+        }
         .logo-wrap{
+            float: left;
             padding-top: 0px;
+            padding-bottom: 35px;
             .logo{
                 float: left;
                 width: 207px;
@@ -71,6 +81,9 @@
                 float: right;
                 margin-left: 0;
                 margin-top: 31px;
+                .icon{
+                    margin-right: 0;
+                }
                 .nav-title{
                     display: none;
                 }
@@ -91,3 +104,5 @@
         overflow-y: auto;
     }
 }
+
+

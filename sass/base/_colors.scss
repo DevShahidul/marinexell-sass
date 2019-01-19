@@ -6,15 +6,31 @@ $tertiary-color: #949494;
 $theme-red: #bc2629;
 $base-transparent: rgba(17, 26, 39, .7);
 
+
+// header text color
+.main-header{
+    color: $base-bg;
+}
+
+.overHero {
+    .main-header{
+        background-color: $base-text;
+    }
+}
+
 // Nav link color
 .nav-link a{
     color: $base-bg;
 }
 
 
-// header text color
-.main-header{
-    color: $base-bg;
+// Language triger color
+.change-language-triger{
+    a{
+        span{
+            color: $base-bg;
+        }
+    }
 }
 
 // Hero section text color
@@ -34,6 +50,18 @@ $base-transparent: rgba(17, 26, 39, .7);
 .offering-list{
     a{
         color: $base-bg;
+    }
+}
+
+// Section nav
+.section-nav{
+    ul{
+        text-align: center;
+        li{
+            a{
+                color: $base-text;
+            }
+        }
     }
 }
 

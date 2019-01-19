@@ -1,0 +1,16 @@
+.section-nav{
+    padding-top: 30px;
+    display: none;
+    ul{
+        text-align: center;
+        li{
+            @extend %fw;
+        }
+    }
+}
+
+@include media($mobile){
+    .section-nav{
+        display: block;
+    }
+}

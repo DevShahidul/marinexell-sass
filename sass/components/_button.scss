@@ -39,3 +39,10 @@
         }
     }
 }
+
+// Responsive
+@include media($mobile){
+    .btn{
+        max-width: 260px;
+    }
+}

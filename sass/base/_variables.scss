@@ -1,18 +1,30 @@
+/*  Typography variables */
+
 // NoeDisplay Fonts stack
 $font-stack-NoeDisplay-Regular: (
   "NoeDisplay-Regular",
   sans-serif,
 );
 
+// avenir next medium font stack
 $font-stack-Avenir-Next-Medium: (
   "Avenir-Next-Medium",
   sans-serif,
 );
 
+// avenir next demibold font stack
 $font-stack-AvenirNextDemiBold: (
   "AvenirNextDemiBold",
   sans-serif,
 );
+
+// roboto font stack
+$robotoFontStack: (
+  'Roboto', 
+  sans-serif,
+);
+/* //End  Typography variables */
+
 
 // Color state
 $base-border: $base-text;
@@ -39,4 +51,9 @@ $button-focused-shadow: 0 3px 4px 0 $base-gradient;
 $mobile: min-width 320px max-width 767px;
 $mobileSmall: max-width 320px;
 $mobileLarge: min-width 480px max-width 767px;
+// Tablate screen
+$tablate: min-width 768px max-width 1024px;
+$tablateSmall: min-width 768px max-width 991px;
+$tablatelarge: min-width 992px max-width 1024px;
+
 

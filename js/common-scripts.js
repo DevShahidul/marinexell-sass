@@ -29,6 +29,21 @@
             $(".icon").toggleClass('close');
         });
 
+        if($(window).width() < 768){
+            $(".nav-wrap > ul > li .nav-link > a").click(function(){
+                $(this).parent().find("ul").slideToggle();
+            })
+        }
+
+        var heroHeight = $(".hero-section").outerHeight();
+        $(window).on("scroll", function(){
+            if($(window).scrollTop() > heroHeight ){
+                $("body").addClass("overHero");
+            }else{
+                $("body").removeClass("overHero");
+            }
+        })
+
 		
 	})// End ready function.
 

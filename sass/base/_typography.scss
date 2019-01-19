@@ -13,7 +13,7 @@
 // fonts
 $default-font-size: 14px;
 $default-line-height: 28px;
-$default-font-family: 'Roboto', sans-serif;
+$default-font-family: $robotoFontStack;
 $default-font-weight: 300;
 $font-family-NoeDisplay: $font-stack-NoeDisplay-Regular;
 $nav-font-size: 36px;
@@ -96,6 +96,18 @@ h6{
     }
 }
 
+// Language triger color
+.change-language-triger{
+    margin-top: 60px;
+    a{
+        text-decoration: none;
+        span{
+            line-height: 36px;
+            text-transform: uppercase;
+        }
+    }
+}
+
 // hero tab thumb
 .thumb-wrap{
     span{
@@ -118,6 +130,19 @@ h6{
         span{
             font-weight: $mediumFontWeight;
             text-transform: uppercase;  
+        }
+    }
+}
+
+// Section nav
+.section-nav{
+    ul{
+        text-align: center;
+        li{
+            a{
+                letter-spacing: 2.47px;
+                text-decoration: none;
+            }
         }
     }
 }
@@ -167,6 +192,10 @@ h6{
                 text-transform: uppercase;
                 a{
                     text-decoration: none;
+                    letter-spacing: 1px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -183,8 +212,13 @@ h6{
                     font-weight: $regularFontWeight;
                 }
                 a{
+                    font-size: $default-font-size + 3;
+                    line-height: $default-line-height + 3;
                     font-weight: $regularFontWeight;
                     text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
                 
             }
@@ -194,10 +228,31 @@ h6{
                 margin-right: 26px;
                 text-decoration: none;
                 font-weight: $mediumFontWeight;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }
     .copyright{
         font-weight: $regularFontWeight;
+        letter-spacing: 1px;
+    }
+}
+
+
+// Nav Responsive style
+@include media($mobile){
+    .nav-wrap {
+        > ul{
+            li{
+                .nav-link {
+                    > a{
+                        font-size: $nav-font-size - 9;
+                    }
+                }
+                
+            }
+        }
     }
 }

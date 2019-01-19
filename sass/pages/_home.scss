@@ -9,6 +9,20 @@
         &:first-child{
            margin-top: 190px; 
         }
+        .container{
+            position: relative;
+            .first-heading{
+                position: absolute;
+                left: 30px; 
+                top: -110px;
+                h6,
+                h2{
+                  @include inlineMiddle;
+                  margin-right: 40px; 
+                  margin-bottom: 0 !important; 
+                }
+            }
+        }
         figure{
             @extend %bg;
             background-size: contain;
@@ -71,7 +85,7 @@
                             border-radius: 50%;
                             background-color: $base-text;
                             left: auto;
-                            right: -20px;
+                            right: -27px;
                         }
                     }
                 }
@@ -84,6 +98,7 @@
         
     }
 }
+
 
 // Project section 
 .projects-section{
@@ -132,6 +147,127 @@
                 padding: 0 10px;
                 img{
                     display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+// Responsive on mobile 320px to 767px
+@include media($mobile){
+    .page-content-section{
+        .article-wrap{
+            margin-top: 60px;
+            &:first-child{
+                margin-top: 27px;
+            }
+            .container {
+                .content {
+                    padding: 25px 0 0;
+                    h6{
+                        margin-bottom: 10px;
+                    }
+                    h2{
+                        margin-bottom: 27px;
+                    }
+                    ul{
+                        display: none;
+                    }
+                    p{
+                        margin-bottom: 10px;
+                    }
+                    .btn{
+                        margin-top: 21px;
+                    }
+                    .first-heading{
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        h6,
+                        h2{
+                            margin-bottom: 10px !important;
+                            display: block;
+                        }
+                        h2{
+                            margin-bottom: 27px !important;
+                        }
+                    }
+                    
+                }
+            }
+            &.image-on-left,
+            &.image-on-right{
+                figure{
+                    @extend %fwm;
+                    position: relative;
+                    @extend %lataraba;
+                    background-image: none !important;
+                    img{
+                        display: block;
+                    }
+                }
+                .container{
+                    .content{
+                        @extend %fwm;
+                    }
+                }
+            }
+        }
+    }
+
+    .projects-section{
+        margin-top: 70px;
+        .projects-wrap{
+            .project-item{
+                margin-right: 0;
+                margin-top: 13px;
+                width: 100%;
+            }
+        }
+    }
+    .partner-section{
+        margin-top: 70px;
+        .container{
+            p{
+                margin-bottom: 49px;
+            }
+            .parnter-logo-wrap{
+                display: block;
+                a{
+                    display: inline-block;
+                    width: 50%;
+                    margin: 0 -2px;
+                }
+            }
+        }
+    }
+}
+
+// Responsive on tablate 768px to 991px
+@include media($tablateSmall){
+    .page-content-section{
+        .article-wrap {
+            &:first-child{
+                margin-top: 263px;
+            }
+            figure{
+                background-position: 0 0;
+            }
+            .container {
+                .content {
+                    padding: 0;
+                    .first-heading{
+                        top: -183px;
+                        h6,
+                        h2{
+                            display: block;
+
+                        }
+                        h2{
+                            margin-top: 25px;
+                        }
+                    }
+                    
                 }
             }
         }
